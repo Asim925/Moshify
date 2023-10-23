@@ -29,6 +29,22 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
+.badge {
+  color: white;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+}
+
+.badgeOne {
+  background-color: var(--color-primary);
+}
+
+.badgeTwo {
+  background-color: var(--color-secondary);
+}
+
 /* BigScreen media query for typography */
 @media screen and (min-width: 1024px) {
   body {
