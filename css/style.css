@@ -1,0 +1,68 @@
+/* ......TYPOGRAPHY....... */
+
+html {
+  font-size: 1.5rem;
+}
+
+/* colors */
+:root {
+  --color-primary: #2584ff;
+  --color-secondary: #00d9ff;
+  --color-accent: #ff3400;
+  --color-heading: #1b0760;
+  --color-body: #918ca4;
+}
+
+body {
+  font-family: inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  line-height: 1.2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-heading);
+}
+
+h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* BigScreen media query for typography */
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+}
+
+/* ......LINKS...... */
+a {
+  text-decoration: none;
+}
+
+.learnMore {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+.learnMore::after {
+  content: "-->";
+  margin-left: 5px;
+}
+
+.learnMore:hover::after {
+  margin-left: 10px;
+  transition-duration: 0.3s;
+}
+
+/* BigScreen media query for LINKS */
+
+@media screen and (min-width: 1024) {
+  .learnMore {
+    font-size: 1rem;
+  }
+}
