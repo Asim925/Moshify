@@ -29,22 +29,6 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
-.badge {
-  color: white;
-  border-radius: 20px;
-  white-space: nowrap;
-  padding: 0.25rem 1rem;
-  font-weight: 600;
-}
-
-.badgeOne {
-  background-color: var(--color-primary);
-}
-
-.badgeTwo {
-  background-color: var(--color-secondary);
-}
-
 /* BigScreen media query for typography */
 @media screen and (min-width: 1024px) {
   body {
@@ -81,4 +65,47 @@ a {
   .learnMore {
     font-size: 1rem;
   }
+}
+
+/* Badges */
+
+.badges {
+  margin: 5px;
+}
+
+.badge {
+  color: white;
+  border-radius: 20px;
+  white-space: nowrap;
+  padding: 0.25rem 1rem;
+  font-weight: 600;
+  font-size: 100%;
+}
+
+.badgeOne {
+  background-color: var(--color-primary);
+}
+
+.badgeTwo {
+  background-color: var(--color-secondary);
+}
+
+/* media query for badges */
+@media screen and (max-width: 1024px) {
+  .badges {
+    font-size: 70%;
+  }
+}
+
+/* lists */
+.list {
+  padding-left: 0;
+  list-style: none;
+  color: var(--color-heading);
+}
+
+.item {
+  display: inline-block;
+  margin: 5px;
+  font-weight: bold;
 }
