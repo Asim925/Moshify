@@ -1,7 +1,13 @@
 /* ......TYPOGRAPHY....... */
 
+*,
+*::after*::before {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 1.5rem;
+  box-sizing: border-box;
 }
 
 /* colors */
@@ -98,14 +104,67 @@ a {
 }
 
 /* lists */
+
+/* horizontal */
 .list {
   padding-left: 0;
   list-style: none;
   color: var(--color-heading);
 }
 
-.item {
+.listItem {
   display: inline-block;
   margin: 5px;
   font-weight: bold;
+}
+
+/* tickedlist */
+.tickedList {
+  list-style-image: url(../pics/tick.svg);
+  color: var(--color-heading);
+}
+
+.tick-list-item {
+  padding-left: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+/* icons */
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.iconClock {
+  fill: var(--color-accent);
+}
+
+.clock-container {
+  background-color: pink;
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* buttons */
+
+.btn {
+  border-radius: 30px;
+  margin-top: 5px;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-buy {
+  background-color: var(--color-secondary);
+  border: 3px solid var(--color-heading);
+  color: white;
 }
