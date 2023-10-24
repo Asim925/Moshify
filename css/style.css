@@ -1,7 +1,8 @@
 /* ......TYPOGRAPHY....... */
 
 *,
-*::after*::before {
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -170,7 +171,6 @@ a {
 }
 
 .input-group {
-  width: auto;
   margin: 1rem;
   border: 2px grey solid;
   box-shadow: 0 0 20px 10px lightgrey;
@@ -179,6 +179,7 @@ a {
 }
 
 .input-main {
+  width: 100%;
   margin: 1rem;
   outline: 0;
   flex-grow: 1;
@@ -199,10 +200,33 @@ a {
   color: white;
   font-weight: 600;
 }
+
 /* media query for the buttons and input */
 @media screen and (min-width: 1024px) {
   .btn,
   .input-main {
     font-size: 105%;
   }
+}
+
+/* card... */
+.card {
+  margin: 2rem;
+  margin-bottom: 0;
+  width: 15rem;
+  height: 12rem;
+  border: 0;
+  box-shadow: 0 0 20px 10px lightgrey;
+}
+
+.cardHeader {
+  padding: 1rem;
+  color: white;
+  background-color: #00d9ff;
+  width: 100%;
+  height: 30%;
+}
+p {
+  padding: 0.5rem 1rem;
+  margin: 0;
 }
