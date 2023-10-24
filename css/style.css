@@ -158,8 +158,6 @@ a {
   padding: 0.5rem 1.5rem;
   font-weight: bold;
   cursor: pointer;
-  display: inline-block;
-  width: 100%;
   text-align: center;
 }
 
@@ -167,4 +165,44 @@ a {
   background-color: var(--color-secondary);
   border: 3px solid var(--color-heading);
   color: white;
+  display: inline-block;
+  width: 50%;
+}
+
+.input-group {
+  width: auto;
+  margin: 1rem;
+  border: 2px grey solid;
+  box-shadow: 0 0 20px 10px lightgrey;
+  display: flex;
+  border-radius: 50px;
+}
+
+.input-main {
+  margin: 1rem;
+  outline: 0;
+  flex-grow: 1;
+  color: var(--color-heading);
+  border: 0;
+}
+
+::placeholder {
+  color: lightgrey;
+}
+
+.btn-search {
+  margin: 5px;
+  border-radius: 50px;
+  background-color: var(--color-accent);
+  display: inline-block;
+  border: 0;
+  color: white;
+  font-weight: 600;
+}
+/* media query for the buttons and input */
+@media screen and (min-width: 1024px) {
+  .btn,
+  .input-main {
+    font-size: 105%;
+  }
 }
