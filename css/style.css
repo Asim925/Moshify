@@ -289,3 +289,24 @@ p {
   padding: 0.5rem 1rem;
   margin: 0;
 }
+
+/* ...grid */
+.grid {
+  display: grid;
+  padding: 3rem;
+}
+
+.col1,
+.col2 {
+  width: 100%;
+}
+.col2 {
+  height: 5rem;
+  background-color: #ff3400;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
