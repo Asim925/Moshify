@@ -30,6 +30,7 @@ h1,
 h2,
 h3 {
   color: var(--color-heading);
+  padding-left: 0.5rem;
 }
 
 h3 {
@@ -55,6 +56,7 @@ a {
 .learnMore {
   color: var(--color-accent);
   font-weight: bold;
+  margin: 0.5rem;
 }
 .learnMore::after {
   content: "-->";
@@ -77,7 +79,7 @@ a {
 /* Badges */
 
 .badges {
-  margin: 5px;
+  margin: 0.5rem;
 }
 
 .badge {
@@ -121,7 +123,7 @@ a {
 
 /* tickedlist */
 .tickedList {
-  list-style-image: url(../pics/tick.svg);
+  list-style-image: url(../images/tick.svg);
   color: var(--color-heading);
 }
 
@@ -137,18 +139,65 @@ a {
   height: 80px;
 }
 
-.iconClock {
-  fill: var(--color-accent);
-}
-
+/* ....clock icon */
 .clock-container {
-  background-color: pink;
   width: 90px;
   height: 90px;
   border-radius: 100%;
-  display: inline-flex;
+  display: block;
   justify-content: center;
   align-items: center;
+  margin-left: 1rem;
+}
+.iconClock {
+  fill: var(--color-heading);
+}
+/* .........computerIcon */
+.iconComputer {
+  fill: var(--color-accent);
+  padding-top: 0.5rem;
+}
+
+.computerContainer {
+  display: inline-flex;
+  margin: 2rem 2rem 0 2rem;
+}
+
+/* ...line icon... */
+.lineContainer {
+  margin: 0.5rem;
+}
+.lineBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.iconLine {
+  margin-left: 1rem;
+}
+
+.lineContainer-quote {
+  color: var(--color-heading);
+  font-style: italic;
+  margin-bottom: 0;
+}
+.lineName {
+  color: var(--color-accent);
+}
+.companyName {
+  color: darkgrey;
+  font-size: 60%;
+  position: absolute;
+  bottom: -20px;
+  left: 120px;
+  font-style: italic;
+}
+
+/* media query for icons */
+@media screen and (min-width: 1024px) {
+  .mediaContainer {
+    font-size: 90%;
+  }
 }
 
 /* buttons */
@@ -168,6 +217,7 @@ a {
   color: white;
   display: inline-block;
   width: 50%;
+  margin: 0.5rem 0 0.5rem 1rem;
 }
 
 .input-group {
@@ -217,6 +267,7 @@ a {
   height: 12rem;
   border: 0;
   box-shadow: 0 0 20px 10px lightgrey;
+  position: relative;
 }
 
 .cardHeader {
@@ -225,6 +276,14 @@ a {
   background-color: #00d9ff;
   width: 100%;
   height: 30%;
+}
+.cardHeader::before {
+  content: url(../images/popular.svg);
+  width: 35px;
+  display: inline-block;
+  position: absolute;
+  top: -5px;
+  right: 5%;
 }
 p {
   padding: 0.5rem 1rem;
