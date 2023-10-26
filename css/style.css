@@ -193,6 +193,22 @@ a {
   font-style: italic;
 }
 
+.iconQuotes-span {
+  background-color: var(--color-accent);
+  border-radius: 100%;
+  padding: 5px;
+  position: absolute;
+  fill: white;
+  top: 30px;
+  right: -40px;
+  /* padding: px; */
+}
+
+/* .icon .iconQuotes {
+  width: 80%;
+  height: 80%;
+} */
+
 /* media query for icons */
 @media screen and (min-width: 1024px) {
   .mediaContainer {
@@ -260,11 +276,11 @@ a {
 }
 
 /* card... */
-.card {
+.card-one {
   margin: 2rem;
   margin-bottom: 0;
-  width: 15rem;
-  height: 12rem;
+  width: 20rem;
+  height: fit-content;
   border: 0;
   box-shadow: 0 0 20px 10px lightgrey;
   position: relative;
@@ -289,24 +305,35 @@ p {
   padding: 0.5rem 1rem;
   margin: 0;
 }
-
 /* ...grid */
-.grid {
-  display: grid;
-  padding: 3rem;
+.grid-sec {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  padding: 1rem;
 }
-
-.col1,
-.col2 {
+.card-two {
+  max-width: 100%;
+  margin: 2rem;
+  height: 100%;
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px 10px lightgrey;
+}
+.man,
+.col1 {
   width: 100%;
 }
-.col2 {
+.col1 {
   height: 5rem;
-  background-color: #ff3400;
+  background-color: gold;
+}
+.image-container {
+  position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  .grid {
+  .grid-sec {
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
