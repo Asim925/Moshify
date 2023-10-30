@@ -11,6 +11,12 @@ html {
   box-sizing: border-box;
 }
 
+@media screen and (min-width: 1250px) {
+  html {
+    font-size: 2rem;
+  }
+}
+
 /* colors */
 :root {
   --color-primary: #2584ff;
@@ -70,7 +76,7 @@ a {
 
 /* BigScreen media query for LINKS */
 
-@media screen and (min-width: 1024) {
+@media screen and (min-width: 1024px) {
   .learnMore {
     font-size: 1rem;
   }
@@ -100,7 +106,7 @@ a {
 }
 
 /* media query for badges */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .badges {
     font-size: 70%;
   }
@@ -139,6 +145,11 @@ a {
   height: 80px;
 }
 
+.icon-small {
+  width: 40px;
+  height: 40px;
+}
+
 /* ....clock icon */
 .clock-container {
   width: 90px;
@@ -166,6 +177,10 @@ a {
 /* ...line icon... */
 .lineContainer {
   margin: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .lineBox {
   display: flex;
@@ -179,7 +194,8 @@ a {
 .lineContainer-quote {
   color: var(--color-heading);
   font-style: italic;
-  margin-bottom: 0;
+  padding: 0px;
+  margin: 0;
 }
 .lineName {
   color: var(--color-accent);
@@ -188,28 +204,28 @@ a {
   color: darkgrey;
   font-size: 60%;
   position: absolute;
-  bottom: -20px;
+  bottom: -1.5rem;
   left: 120px;
   font-style: italic;
 }
 
 .iconQuotes-span {
   background-color: var(--color-accent);
+  width: 90px;
+  height: 90px;
   border-radius: 100%;
-  padding: 5px;
+  padding: 0.5rem 0.6rem;
   position: absolute;
   fill: white;
   top: 30px;
-  right: -40px;
-  /* padding: px; */
+  right: -45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* .icon .iconQuotes {
-  width: 80%;
-  height: 80%;
-} */
-
 /* media query for icons */
+
 @media screen and (min-width: 1024px) {
   .mediaContainer {
     font-size: 90%;
@@ -279,7 +295,7 @@ a {
 .card-one {
   margin: 2rem;
   margin-bottom: 0;
-  width: 20rem;
+  max-width: 20rem;
   height: fit-content;
   border: 0;
   box-shadow: 0 0 20px 10px lightgrey;
@@ -314,19 +330,16 @@ p {
 .card-two {
   max-width: 100%;
   margin: 2rem;
+  padding: 1rem;
   height: 100%;
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px lightgrey;
 }
-.man,
-.col1 {
+.man {
   width: 100%;
 }
-.col1 {
-  height: 5rem;
-  background-color: gold;
-}
+
 .image-container {
   position: relative;
 }
@@ -335,5 +348,67 @@ p {
   .grid-sec {
     display: grid;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .lineContainer-quote {
+    margin: 0.5rem 0.5rem 0rem 1.8rem;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1rem;
+  }
+}
+
+/* callout */
+
+.callout {
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.callout-heading {
+  margin: 1rem 0 0.8rem;
+  color: white;
+  line-height: 1.1rem;
+}
+
+.call-btn {
+  background-color: var(--color-secondary);
+  border: 0;
+  border-radius: 50px;
+  color: #fff;
+  width: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+  .callout {
+    text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .callout-para,
+  .callout-heading {
+    padding: 0 0 0 1rem;
+  }
+  .callout-para {
+    margin-bottom: 1rem;
+  }
+
+  .call-btn {
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .callout {
+    font-size: 1rem;
+    line-height: 1.2rem;
   }
 }
