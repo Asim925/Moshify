@@ -19,6 +19,26 @@
   </head>
 
   <body>
+    <!-- Navigation bar -->
+
+    <nav class="nav collapsible collapsible-expanded">
+      <a href="/">
+        <img class="brand" src="images/logo.svg" alt="website logo" />
+      </a>
+
+      <svg class="iconMenu menuBtn">
+        <use xlink:href="images/sprite.svg#menu"></use>
+      </svg>
+
+      <!-- links of menu -->
+      <ul class="menu-list collapsible-content">
+        <li class="nav-item"><a href="#">Head</a></li>
+        <li class="nav-item"><a href="#">Body</a></li>
+        <li class="nav-item"><a href="#">Foot</a></li>
+      </ul>
+    </nav>
+
+    <!-- Heading -->
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
     <h3>Heading 3</h3>
@@ -150,11 +170,12 @@
           <use xlink:href="images/sprite.svg#easy"></use>
         </svg>
       </header>
-      <div class="collapsible-para">
+      <div class="collapsible-content">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate
         voluptatum minus, porro ullam dolores nostrum.
       </div>
     </section>
+
     <script src="js/main.js"></script>
   </body>
 </html>

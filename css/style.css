@@ -32,6 +32,77 @@ body {
   line-height: 1.2rem;
 }
 
+/* Navigation bar */
+
+.brand {
+  margin-top: 0.5rem;
+}
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.menu-list {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: hidden;
+}
+
+.nav-item {
+  font-size: 0.8rem;
+  padding: 0.3rem 1rem;
+  border-bottom: 2px solid #222;
+}
+.nav-item > a {
+  color: #d2d0bd;
+}
+.nav-item > a:hover {
+  transition: all 0.3s;
+  color: white;
+}
+
+.iconMenu {
+  fill: white;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+.menuBtn {
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.collapsible-expanded .menuBtn {
+  opacity: 1;
+  box-shadow: 0 0 2px 3px;
+  border-radius: 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .iconMenu {
+    display: none;
+  }
+
+  .menu-list {
+    width: auto;
+    display: flex;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav-item {
+    border: 0;
+  }
+}
+
+/* heading */
+
 h1,
 h2,
 h3 {
@@ -420,6 +491,11 @@ p {
   padding: 1rem;
 }
 
+/* majbooran deni pari sab khrb hoaraha tha */
+.nav {
+  padding: 0;
+}
+
 .collapsible-heading {
   margin: 0 0 5px;
   padding: 0;
@@ -431,27 +507,23 @@ p {
   margin-bottom: 0.5rem;
 }
 
-.collapsible-para {
-  line-height: normal;
-}
-
 .collapsible-arrow {
   transform: rotate(-90deg);
   transition: transform 0.3s;
-}
-
-.collapsible-para {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition: all 0.3s;
 }
 
 .collapsible-expanded .collapsible-arrow {
   transform: rotate(0);
 }
 
-.collapsible-expanded .collapsible-para {
+.collapsible-content {
+  line-height: normal;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.collapsible-expanded .collapsible-content {
   max-height: 100vh;
   overflow: visible;
   opacity: 1;
