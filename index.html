@@ -46,7 +46,19 @@
         <a class="hero__btn hero__btn__style" href="#">Get Started</a>
       </div>
 
-      <img class="hero__image" src="images/banner.png" />
+      <!-- ye main nahi use kr raha hon gande  lag rahe ahin -->
+
+      <!-- <picture>
+        <source
+          type="image/webp"
+          srcset="images/banner.webp @1x, images/banner.webp @2x"
+        />
+        <source
+          type="image/png"
+          srcset="images/banner.png @1x, images/banner.png @2x"
+        /> </picture> -->
+
+      <img class="hero__image" src="images/banner 2x.webp" />
     </section>
 
     <!-- Heading -->
@@ -91,11 +103,36 @@
     <!-- buttons -->
     <button class="btn btn-buy" type="submit">Buy now</button>
 
-    <!-- input -->
-    <div class="input-group">
-      <input type="input" class="input-main" placeholder="Enter the name..." />
-      <button class="btn btn-search" type="submit">Search</button>
-    </div>
+    <!-- inputs -->
+    <section>
+      <div class="input-group">
+        <input
+          type="input"
+          class="input-main"
+          placeholder="Enter the name here..."
+        />
+        <button class="btn btn-search" type="submit">
+          <svg class="icon-small icon-search">
+            <use xlink:href="./images/sprite.svg#search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+      <div class="price-box">
+        <div class="price-row-one">
+          <span class="price">it's $9.01</span>
+          <span class="price">it's $9.02</span>
+          <span class="price">it's $9.03</span>
+        </div>
+
+        <div class="price-row-two">
+          <span class="price">it's $9.04</span>
+          <span class="price">it's $9.05</span>
+          <span class="price">it's $9.06</span>
+        </div>
+      </div>
+    </section>
+
     <!-- card -->
     <div class="card-one">
       <header class="cardHeader">Its is the domi text</header>
@@ -104,8 +141,6 @@
         voluptatum istinctio fuga?
       </p>
     </div>
-
-    <!-- Media -->
 
     <!-- icon with para -->
     <section class="mediaContainer">
