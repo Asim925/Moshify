@@ -46,9 +46,7 @@
         <a class="hero__btn hero__btn__style" href="#">Get Started</a>
       </div>
 
-      <!-- ye main nahi use kr raha hon gande  lag rahe ahin -->
-
-      <!-- <picture>
+      <picture>
         <source
           type="image/webp"
           srcset="images/banner.webp @1x, images/banner.webp @2x"
@@ -56,9 +54,9 @@
         <source
           type="image/png"
           srcset="images/banner.png @1x, images/banner.png @2x"
-        /> </picture> -->
-
-      <img class="hero__image" src="images/banner 2x.webp" />
+        />
+        <img class="hero__image" src="images/banner.webp" />
+      </picture>
     </section>
 
     <!-- Heading -->
@@ -69,7 +67,6 @@
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam adipisci
       modi dolor minus corporis distinctio harum unde sapiente sequi laborum.
     </p>
-    <a class="learnMore" href="#">LEARN MORE</a>
     <div class="badges">
       <span class="badge badgeOne">10% off</span>
       <span class="badge badgeTwo">10% off</span>
@@ -93,24 +90,18 @@
       </ul>
     </div>
 
-    <!-- icon -->
-    <span class="clock-container">
-      <svg class="icon iconClock">
-        <use xlink:href="./images/sprite.svg#clock"></use>
-      </svg>
-    </span>
-
     <!-- buttons -->
     <button class="btn btn-buy" type="submit">Buy now</button>
 
     <!-- inputs -->
-    <section>
+    <section class="input-sec">
       <div class="input-group">
         <input
           type="input"
           class="input-main"
           placeholder="Enter the name here..."
         />
+
         <button class="btn btn-search" type="submit">
           <svg class="icon-small icon-search">
             <use xlink:href="./images/sprite.svg#search"></use>
@@ -118,6 +109,8 @@
           Search
         </button>
       </div>
+
+      <!-- prices -->
       <div class="price-box">
         <div class="price-row-one">
           <span class="price">it's $9.01</span>
@@ -134,22 +127,43 @@
     </section>
 
     <!-- card -->
-    <div class="card-one">
-      <header class="cardHeader">Its is the domi text</header>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum, quaerat
-        voluptatum istinctio fuga?
-      </p>
-    </div>
+    <section class="card-sec">
+      <div class="card">
+        <header class="cardHeader">
+          <p>Its is the domi text</p>
+        </header>
+        <p class="card-para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
+          quaerat voluptatum istinctio fuga?
+        </p>
+      </div>
+
+      <div class="card popular-card">
+        <header class="cardHeader popular-card-header">
+          <p>Its is the domi text</p>
+        </header>
+        <p class="card-para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
+          quaerat voluptatum istinctio fuga?
+        </p>
+      </div>
+
+      <div class="card">
+        <header class="cardHeader"><p>Its is the domi text</p></header>
+        <p class="card-para">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum,
+          quaerat voluptatum istinctio fuga?
+        </p>
+      </div>
+    </section>
 
     <!-- icon with para -->
     <section class="mediaContainer">
       <div class="computerContainer">
-        <span class="computerBox">
-          <svg class="icon iconComputer">
-            <use xlink:href="images/sprite.svg#computer"></use>
-          </svg>
-        </span>
+        <svg class="icon iconComputer">
+          <use xlink:href="images/sprite.svg#computer"></use>
+        </svg>
+
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae iure
           ullam eum eius. Fuga, molestias.
@@ -157,9 +171,17 @@
       </div>
     </section>
 
-    <!-- grid -->
+    <!-- grid Testimonial-->
+    <header class="testimonial-header">
+      <h1>What Our Customers are Saying</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, magni.
+      </p>
+    </header>
+
     <section class="card-two">
       <div class="grid-sec">
+        <!-- image wala div grid ka-->
         <div class="image-container">
           <img
             class="man"
@@ -172,7 +194,7 @@
             </svg>
           </span>
         </div>
-
+        <!-- image ke sath wala para grid main -->
         <div class="lineContainer">
           <blockquote class="lineContainer-quote">
             "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur
@@ -180,15 +202,15 @@
             Quae iure ullam eum eius. Fuga, molestias Lorem ipsum, dolor sit
             amet consectetur adipisicing elit. Iste, placeat!."
           </blockquote>
-          <span class="lineBox">
+          <div class="lineBox">
             <svg class="icon iconLine">
               <use xlink:href="images/sprite.svg#line"></use>
             </svg>
             <div>
               <p class="lineName">Apptycoons</p>
-              <p class="companyName">"--CEO"</p>
+              <p class="companyName">"pata nahi kia"</p>
             </div>
-          </span>
+          </div>
         </div>
         <div></div>
       </div>
@@ -221,6 +243,60 @@
         voluptatum minus, porro ullam dolores nostrum.
       </div>
     </section>
+    <!-- featuers -->
+    <section class="feature">
+      <!-- feature 1 -->
+      <header class="feature-header">
+        <h1>Host on the Cloud to Keep Growing</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+          ducimus.
+        </p>
+      </header>
+      <div class="feature-one">
+        <!-- box 1 of feature no.1 -->
+        <div class="box-one feature-box-one">
+          <svg class="icon iconClock">
+            <use xlink:href="./images/sprite.svg#clock"></use>
+          </svg>
+          <h2>Super Easy to Use</h2>
+          <p class="feature-para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+            voluptatum ratione deleniti maiores, impedit fugiat commodi.
+            Ducimus, ipsum repellendus? Sint neque animi harum incidunt sed.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Perspiciatis, nemo.
+          </p>
+          <a class="learnMore" href="#">LEARN MORE</a>
+        </div>
+        <!-- box 2 of feature no.1  -->
+        <div class="box-two feature-box-two">
+          <img
+            class="feature-box-two-image"
+            src="images/easy.jpg"
+            alt="easy graph"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <section class="footer-product">
+        <!-- footer ke product ka header -->
+        <div class="product-header">
+          <h3 class="footer-heading">Products</h3>
+          <svg class="icon-small iconMenu footer-menu-btn">
+            <use xlink:href="./images/sprite.svg#menu"></use>
+          </svg>
+        </div>
+        <div class="footer-product-item">WordPress Hosting</div>
+        <div class="footer-product-item">Free Automated WordPress</div>
+        <div class="footer-product-item">Migrations</div>
+        <div class="footer-product-item">Domain Names</div>
+        <div class="footer-product-item">Monthly Web Hosting</div>
+      </section>
+    </footer>
 
     <!-- javaScript -->
     <script src="js/main.js"></script>

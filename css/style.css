@@ -15,12 +15,6 @@ html {
   width: 0;
 } */
 
-@media screen and (min-width: 1250px) {
-  html {
-    /* font-size: 2rem; */
-  }
-}
-
 /* colors */
 :root {
   --color-primary: #2584ff;
@@ -59,7 +53,7 @@ body {
 }
 
 .nav-item {
-  font-size: 0.8rem;
+  font-size: 1.3rem;
   padding: 0.3rem 1rem;
   border-bottom: 2px solid #222;
 }
@@ -89,6 +83,14 @@ body {
 }
 
 @media screen and (min-width: 768px) {
+  .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .icon-small {
+    width: 40px;
+    height: 40px;
+  }
   .iconMenu {
     display: none;
   }
@@ -121,20 +123,22 @@ body {
 .hero__heading {
   padding: 1rem 0;
   margin: 0;
-  line-height: 2rem;
+  font-size: 50px;
+  line-height: 3rem;
   color: white;
 }
 .hero__para {
   letter-spacing: 1px;
+  line-height: 2rem;
   padding-left: 0;
   margin: 0;
+  font-size: 25px;
 }
 
 .hero__btn {
-  margin: 0;
-  padding: 0.5rem 2rem;
-  font-size: 0.8rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
   max-width: fit-content;
 }
 /*  hero__image */
@@ -151,6 +155,9 @@ body {
     align-items: center;
     clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
   }
+  .hero__heading {
+    line-height: 3rem;
+  }
   .hero__content {
     text-align: left;
     width: 50vw;
@@ -158,12 +165,6 @@ body {
   .hero__image {
     padding: 0;
     width: 50vw;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .hero__heading {
-    line-height: 2.5rem;
   }
 }
 
@@ -194,29 +195,6 @@ h3 {
 /* ......LINKS...... */
 a {
   text-decoration: none;
-}
-
-.learnMore {
-  color: var(--color-accent);
-  font-weight: bold;
-  margin: 0.5rem;
-}
-.learnMore::after {
-  content: "-->";
-  margin-left: 5px;
-}
-
-.learnMore:hover::after {
-  margin-left: 10px;
-  transition-duration: 0.3s;
-}
-
-/* BigScreen media query for LINKS */
-
-@media screen and (min-width: 1024px) {
-  .learnMore {
-    font-size: 1rem;
-  }
 }
 
 /* Badges */
@@ -278,37 +256,24 @@ a {
 /* icons */
 
 .icon {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
 }
 
 .icon-small {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
-/* ....clock icon */
-.clock-container {
-  width: 90px;
-  height: 90px;
-  border-radius: 100%;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin-left: 1rem;
-}
-.iconClock {
-  fill: var(--color-heading);
-}
 /* .........computerIcon */
 .iconComputer {
   fill: var(--color-accent);
   padding-top: 0.5rem;
 }
-
 .computerContainer {
   display: inline-flex;
   margin: 2rem 2rem 0 2rem;
+  align-items: center;
 }
 
 /* ...line icon... */
@@ -320,12 +285,14 @@ a {
   flex-direction: column;
 }
 .lineBox {
+  /* height: 100%; */
   display: flex;
   align-items: center;
   position: relative;
 }
 .iconLine {
   margin-left: 1rem;
+  height: 30px;
 }
 
 .lineContainer-quote {
@@ -336,6 +303,7 @@ a {
 }
 .lineName {
   color: var(--color-accent);
+  padding: 0 0 0 10px;
 }
 .companyName {
   color: darkgrey;
@@ -344,18 +312,20 @@ a {
   bottom: -1.5rem;
   left: 120px;
   font-style: italic;
+  padding: 0;
+  margin: 0;
 }
 
 .iconQuotes-span {
   background-color: var(--color-accent);
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   border-radius: 100%;
   padding: 0.5rem 0.6rem;
   position: absolute;
   fill: white;
-  top: 30px;
-  right: -45px;
+  top: 25px;
+  right: -30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -389,12 +359,19 @@ a {
   margin: 0.5rem 0 0.5rem 1rem;
 }
 
+/* inputs */
+.input-sec {
+  margin: 1.5rem;
+}
+
 .input-group {
-  margin: 1rem;
+  height: 4rem;
+  margin: auto;
+  max-width: 670px;
   border: 0;
+  border-radius: 50px;
   box-shadow: 0 0 20px 10px lightgrey;
   display: flex;
-  border-radius: 50px;
 }
 
 .input-main {
@@ -412,7 +389,6 @@ a {
 
 .btn-search,
 .hero__btn__style {
-  margin: 5px;
   border-radius: 50px;
   background-color: var(--color-accent);
   display: inline-block;
@@ -426,6 +402,7 @@ a {
   align-items: center;
   justify-content: center;
   margin-left: 0;
+  margin: 5px 5px 5px 0;
 }
 .icon-search {
   fill: white;
@@ -435,44 +412,61 @@ a {
 /* price box */
 .price-box {
   text-align: center;
-}
-
-.price-row-one,
-.price-row-two {
-  margin: 0 1rem 0.5rem;
+  margin-top: 1rem;
 }
 
 .price {
+  display: inline-block;
   color: var(--color-heading);
-  font-size: 16px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
 }
 
 .price:hover {
   background-color: var(--color-secondary);
   border-radius: 30px;
-  /* padding: 10px; */
 }
 
 /* media query for the buttons and input */
-@media screen and (min-width: 1024px) {
-  .btn,
-  .input-main {
-    font-size: 105%;
+@media screen and (min-width: 768px) {
+  .price-box {
+    display: flex;
+    justify-content: center;
+  }
+  .price-row-one,
+  .price-row-two {
+    width: fit-content;
   }
 }
 
-/* card... */
-.card-one {
-  margin: 2rem;
-  margin-bottom: 0;
-  max-width: 20rem;
-  height: fit-content;
-  border: 0;
-  box-shadow: 0 0 20px 10px lightgrey;
-  position: relative;
+.card-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
+.card {
+  margin: 2rem;
+  margin-bottom: 0;
+  width: 16rem;
+  height: fit-content;
+  border: 0;
+  box-shadow: 0 0 20px 1px lightgrey;
+  position: relative;
+}
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+.popular-card {
+  box-shadow: 0 0 20px 10px lightgrey;
+}
+
+.popular-card .card-para {
+  margin: 1.5rem 0.5rem;
+}
 .cardHeader {
   padding: 1rem;
   color: white;
@@ -480,24 +474,37 @@ a {
   width: 100%;
   height: 30%;
 }
-.cardHeader::before {
+.popular-card-header {
+  background: var(--color-primary);
+}
+
+.popular-card-header::before {
   content: url(../images/popular.svg);
-  width: 35px;
+  width: 30px;
   display: inline-block;
   position: absolute;
-  top: -5px;
-  right: 5%;
+  top: -4px;
+  right: 3%;
 }
-p {
-  padding: 0.5rem 1rem;
+.card-para {
+  padding: 1rem;
   margin: 0;
 }
-/* ...grid */
-.grid-sec {
-  margin-bottom: 1rem;
-  max-width: 100%;
-  padding: 1rem;
+/* card... */
+@media screen and (min-width: 768px) {
+  .card-sec {
+    flex-direction: row;
+  }
 }
+
+/* ...grid */
+.testimonial-header {
+  text-align: center;
+}
+.testimonial-header > h1 {
+  line-height: 2rem;
+}
+
 .card-two {
   max-width: 100%;
   margin: 2rem;
@@ -506,6 +513,11 @@ p {
   border: 0;
   border-radius: 1rem;
   box-shadow: 0 0 20px 10px lightgrey;
+}
+.grid-sec {
+  margin-bottom: 1rem;
+  max-width: 100%;
+  padding: 1rem;
 }
 .man {
   width: 100%;
@@ -525,7 +537,7 @@ p {
     margin: 0.5rem 0.5rem 0rem 1.8rem;
     padding: 0;
     font-size: 20px;
-    line-height: 1rem;
+    line-height: 25px;
   }
 }
 
@@ -627,4 +639,111 @@ p {
   max-height: 100vh;
   overflow: visible;
   opacity: 1;
+}
+
+/* ....features ......*/
+
+.feature-header {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.feature-header > h1 {
+  line-height: 2rem;
+}
+
+.feature-one {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.box-one,
+.box-two {
+  width: 100%;
+}
+
+.iconClock {
+  fill: var(--color-heading);
+  background-color: lightblue;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.feature-box-one {
+  padding: 2rem 2rem 2rem 2rem;
+}
+.feature-box-two-image {
+  padding: 1rem;
+  width: 100%;
+}
+.feature-para {
+  margin-bottom: 5px;
+  line-height: 1.3rem;
+}
+
+.box-one > h2 {
+  margin: 1rem 0;
+  padding: 0;
+}
+
+/* learn more red link */
+.learnMore {
+  color: var(--color-accent);
+  font-weight: bold;
+  padding-top: 8px;
+}
+.learnMore::after {
+  content: "-->";
+  margin-left: 5px;
+}
+
+.learnMore:hover::after {
+  margin-left: 10px;
+  transition-duration: 0.3s;
+}
+
+/* BigScreen media query for  RED LINKS */
+
+@media screen and (min-width: 768px) {
+  .feature-one {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  .box-one,
+  .box-two {
+    width: 100%;
+  }
+  .feature-box-one {
+    padding-right: 0;
+  }
+  .feature-para {
+    line-height: 1.5rem;
+  }
+}
+
+/* footer */
+.footer {
+  padding: 1rem;
+  background: black;
+}
+.footer-product {
+  line-height: 2rem;
+  margin-top: 3rem;
+}
+.product-header {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-heading {
+  padding: 0;
+  margin-top: 0;
+  color: white;
+}
+
+.footer-menu-btn {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0;
+  margin-right: 5px;
 }
