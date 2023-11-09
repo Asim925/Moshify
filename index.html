@@ -15,9 +15,12 @@
     <!-- styles -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+
+    <!-- AOS animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Document</title>
   </head>
-
+  <!-- BODY -->
   <body>
     <!-- Navigation bar -->
 
@@ -40,7 +43,7 @@
 
     <!-- Hero -->
     <section class="hero">
-      <div class="hero__content">
+      <div class="hero__content" data-aos="fade-right">
         <h1 class="hero__heading">Cloud Hosting for Pros</h1>
         <p class="hero__para">Deploy your websites in less than 30 seconds</p>
         <a class="hero__btn hero__btn__style" href="#">Get Started</a>
@@ -55,7 +58,11 @@
           type="image/png"
           srcset="images/banner.png @1x, images/banner.png @2x"
         />
-        <img class="hero__image" src="images/banner.webp" />
+        <img
+          class="hero__image"
+          src="images/banner.webp"
+          data-aos="zoom-in-left"
+        />
       </picture>
     </section>
 
@@ -94,11 +101,11 @@
     <button class="btn btn-buy" type="submit">Buy now</button>
 
     <!-- inputs -->
-    <section class="input-sec">
+    <section class="input-sec" data-aos="fade-up">
       <div class="input-group">
         <input
-          type="input"
           class="input-main"
+          type="input"
           placeholder="Enter the name here..."
         />
 
@@ -127,7 +134,7 @@
     </section>
 
     <!-- card -->
-    <section class="card-sec">
+    <section class="card-sec" data-aos="fade-up">
       <div class="card">
         <header class="cardHeader">
           <p>Its is the domi text</p>
@@ -172,49 +179,52 @@
     </section>
 
     <!-- grid Testimonial-->
-    <header class="testimonial-header">
-      <h1>What Our Customers are Saying</h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat, magni.
-      </p>
-    </header>
+    <div data-aos="zoom-in">
+      <!-- that div above was the main div for the testimonial -->
+      <header class="testimonial-header">
+        <h1>What Our Customers are Saying</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat,
+          magni.
+        </p>
+      </header>
 
-    <section class="card-two">
-      <div class="grid-sec">
-        <!-- image wala div grid ka-->
-        <div class="image-container">
-          <img
-            class="man"
-            src="images/testimonial.jpg"
-            alt="a happy smiling author"
-          />
-          <span class="iconQuotes-span">
-            <svg class="icon-small iconQuotes">
-              <use xlink:href="images/sprite.svg#quotes"></use>
-            </svg>
-          </span>
-        </div>
-        <!-- image ke sath wala para grid main -->
-        <div class="lineContainer">
-          <blockquote class="lineContainer-quote">
-            "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Debitis, saepe. amet consectetur adipisicing elit.
-            Quae iure ullam eum eius. Fuga, molestias Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Iste, placeat!."
-          </blockquote>
-          <div class="lineBox">
-            <svg class="icon iconLine">
-              <use xlink:href="images/sprite.svg#line"></use>
-            </svg>
-            <div>
-              <p class="lineName">Apptycoons</p>
-              <p class="companyName">"pata nahi kia"</p>
+      <section class="card-two">
+        <div class="grid-sec">
+          <!-- image wala div grid ka-->
+          <div class="image-container">
+            <img
+              class="man"
+              src="images/testimonial.jpg"
+              alt="a happy smiling author"
+            />
+            <span class="iconQuotes-span">
+              <svg class="icon-small iconQuotes">
+                <use xlink:href="images/sprite.svg#quotes"></use>
+              </svg>
+            </span>
+          </div>
+          <!-- image ke sath wala para grid main -->
+          <div class="lineContainer">
+            <blockquote class="lineContainer-quote">
+              "Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit. Debitis, saepe. amet consectetur adipisicing
+              elit. Quae iure ullam eum eius. Fuga, molestias Lorem ipsum, dolor
+              sit amet consectetur adipisicing elit. Iste, placeat!."
+            </blockquote>
+            <div class="lineBox">
+              <svg class="icon iconLine">
+                <use xlink:href="images/sprite.svg#line"></use>
+              </svg>
+              <div>
+                <p class="lineName">Apptycoons</p>
+                <p class="companyName">"pata nahi kia"</p>
+              </div>
             </div>
           </div>
         </div>
-        <div></div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="callout">
       <div>
@@ -255,7 +265,7 @@
       </header>
       <div class="feature-one">
         <!-- box 1 of feature no.1 -->
-        <div class="box-one feature-box-one">
+        <div class="box-one feature-box-one" data-aos="fade-right">
           <svg class="icon iconClock">
             <use xlink:href="./images/sprite.svg#clock"></use>
           </svg>
@@ -270,7 +280,7 @@
           <a class="learnMore" href="#">LEARN MORE</a>
         </div>
         <!-- box 2 of feature no.1  -->
-        <div class="box-two feature-box-two">
+        <div class="box-two feature-box-two" data-aos="zoom-in-left">
           <img
             class="feature-box-two-image"
             src="images/easy.jpg"
@@ -282,23 +292,35 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <section class="footer-product">
-        <!-- footer ke product ka header -->
-        <div class="product-header">
-          <h3 class="footer-heading">Products</h3>
-          <svg class="icon-small iconMenu footer-menu-btn">
-            <use xlink:href="./images/sprite.svg#menu"></use>
-          </svg>
+      <section class="footer-items">
+        <!-- ye wala div isliye banaya take flex de den -->
+        <div class="product">
+          <!-- footer ke product ka header -->
+          <div class="product-header">
+            <h3 class="footer-heading">Products</h3>
+            <svg class="icon-small iconMenu footer-menu-btn">
+              <use xlink:href="./images/sprite.svg#menu"></use>
+            </svg>
+          </div>
+          <div class="footer-product-item">WordPress Hosting</div>
+          <div class="footer-product-item">Free Automated WordPress</div>
+          <div class="footer-product-item">Migrations</div>
+          <div class="footer-product-item">Domain Names</div>
+          <div class="footer-product-item">Monthly Web Hosting</div>
         </div>
-        <div class="footer-product-item">WordPress Hosting</div>
-        <div class="footer-product-item">Free Automated WordPress</div>
-        <div class="footer-product-item">Migrations</div>
-        <div class="footer-product-item">Domain Names</div>
-        <div class="footer-product-item">Monthly Web Hosting</div>
+        <div class="footer-image-copyright">
+          <img class="footer-logo" src="images/logo.svg" />
+          <p class="footer-copyright">&copy; Copyright 2023 Asim&nbsp;Nazeer</p>
+        </div>
       </section>
     </footer>
 
     <!-- javaScript -->
     <script src="js/main.js"></script>
+    <!--AOS animation-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
