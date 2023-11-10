@@ -28,6 +28,7 @@ body {
   font-family: inter, Arial, Helvetica, sans-serif;
   color: var(--color-body);
   line-height: 1.2rem;
+  width: auto;
 }
 
 /* Navigation bar */
@@ -49,7 +50,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  display: hidden;
+  /* display: hidden; */
 }
 
 .nav-item {
@@ -165,6 +166,7 @@ body {
   .hero__image {
     padding: 0;
     width: 50vw;
+    margin-bottom: 200px;
   }
 }
 
@@ -454,7 +456,7 @@ a {
   border: 0;
   box-shadow: 0 0 20px 1px lightgrey;
   position: relative;
-  transition: all 500ms ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .card:hover {
   transform: scale(1.1);
@@ -648,8 +650,9 @@ a {
   text-align: center;
 }
 
-.feature-header > h1 {
-  line-height: 2rem;
+.feature-header > h2 {
+  line-height: 1.5rem;
+  padding: 0;
 }
 
 .feature-one {
