@@ -1,22 +1,57 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: Montserrat;
+  font-weight: 500;
 }
-body {
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-}
-.header {
+.nav-bar {
+  padding: 10px 24px;
   display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
 }
-
-.details,
-.detailsImage {
-  width: 50vw;
+.navPart1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.laptop {
-  width: 40vw;
+.upworkLogo {
+  width: 82px;
+  margin-right: 20px;
+}
+.nav-items {
+  font-size: 12px;
+  font-weight: 600;
+  margin: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shevron {
+  width: 15px;
+}
+.navPart2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search {
+  width: 400px;
+  height: 35px;
+  border: 2px solid lightgray;
   border-radius: 30px;
+  padding-left: 10px;
+}
+.btn {
+  border-radius: 25px;
+  padding: 10px 25px;
+  border: none;
+  font-weight: 600;
+}
+.signUp {
+  background-color: green;
+  color: white;
+}
+.logIn {
+  background-color: white;
 }
