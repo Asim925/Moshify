@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+.header {
+  display: flex;
+}
+
+.details,
+.detailsImage {
+  width: 50vw;
+}
+.laptop {
+  width: 40vw;
+  border-radius: 30px;
+}
