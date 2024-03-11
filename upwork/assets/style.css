@@ -4,13 +4,15 @@
   font-family: Montserrat;
   font-weight: 500;
 }
+
 .nav-bar {
   padding: 10px 24px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid lightgray;
 }
-.navPart1 {
+.navPart1,
+.navPart2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,21 +29,41 @@
   justify-content: center;
   align-items: center;
 }
-.shevron {
+.shevron,
+.searchLogo {
   width: 15px;
 }
-.navPart2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .search {
-  width: 400px;
+  position: relative;
+  display: flex;
+  width: 20rem;
+}
+.search-field {
+  flex-grow: 1;
   height: 35px;
   border: 2px solid lightgray;
   border-radius: 30px;
-  padding-left: 10px;
+  padding-left: 35px;
 }
+.searchLogo {
+  width: 20px;
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 8px;
+}
+
+.searchMenu {
+  position: absolute;
+  background-color: white;
+  border: none;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 5px 8px;
+}
+
 .btn {
   border-radius: 25px;
   padding: 10px 25px;
@@ -51,7 +73,32 @@
 .signUp {
   background-color: green;
   color: white;
+  width: fit-content;
 }
 .logIn {
+  width: fit-content;
   background-color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .search-field {
+    display: none;
+  }
+  .searchMenu {
+    display: none;
+  }
+  .searchLogo {
+    left: 90%;
+    width: 25px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .searchLogo {
+    left: 124%;
+    width: 25px;
+    margin-left: 30px;
+  }
+  .logIn {
+    display: none;
+  }
 }
