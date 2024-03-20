@@ -1,0 +1,19 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid grey;
+}
+.images {
+  display: flex;
+}
+
+.pic1 {
+  border-right: 1px solid black;
+  height: 50px;
+}
